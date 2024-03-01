@@ -1,0 +1,69 @@
+/* Основні кольори та стилі */
+:root {
+    --color-dark: #000; /* Темний колір для тексту і меж */
+    --color-light: #fff; /* Світлий колір для фону */
+    --color-primary: #D9534F; /* Основний акцентний колір */
+    --color-secondary: #555; /* Вторинний текстовий колір */
+    --color-section-bg: #eee; /* Колір фону для секцій */
+    --color-section-title-bg: #D9534F; /* Колір фону для назв секцій */
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    color: var(--color-secondary);
+    background-color: var(--color-light);
+    padding: 20px;
+  }
+  
+  header h1 {
+    text-align: center;
+    color: var(--color-dark);
+  }
+  
+  .menu-container {
+    display: flex;
+    flex-wrap: wrap; /* Перехід на рядковий режим */
+    justify-content: space-between; /* Рівномірний розподіл */
+  }
+  
+  .menu-section {
+    border: 1px solid var(--color-dark);
+    background-color: var(--color-section-bg);
+    margin-bottom: 20px; /* Додано відступ знизу */
+    padding: 40px 20px 20px;
+    width: calc(33.333% - 40px); /* Віднято відступи */
+    position: relative;
+    box-sizing: border-box; /* Враховуємо padding у обчисленні ширини */
+  }
+  
+  .menu-section-title {
+    position: absolute;
+    top: -1px; /* Зміщено наверх */
+    right: -1px; /* Зміщено вправо */
+    background-color: var(--color-section-title-bg);
+    color: var(--color-light);
+    padding: 5px;
+    border: 1px solid var(--color-dark);
+  }
+  
+ /* Tablet layout */
+@media (max-width: 991px) {
+    .menu-section {
+      width: calc(50% - 22px); /* Adjust width for 2-column layout */
+    }
+    #sushi {
+      width: calc(100%); /* Full width for the third section */
+      clear: both; /* Clear floats */
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .menu-section  {
+      width: calc(100% - 20px); /* Виправлено відступи */
+    }
+    #sushi {
+        width: calc(100% - 20px); /* Full width for the third section */
+        clear: both; /* Clear floats */
+      }
+  }
+  
